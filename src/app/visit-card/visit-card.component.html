@@ -1,0 +1,30 @@
+<h1 class="flex text-xl mb-2 justify-center">Visit Card</h1>
+<div class="flex flex-col space-y-3">
+  <div
+    class="flex flex-col space-y-0.5"
+    *ngFor="let field of fields | keyvalue"
+  >
+    <label [for]="field.value.name">{{ field.value.name }}</label>
+    <input
+      [name]="field.value.name"
+      class="w-full rounded-md border border-[#E9EDF4] py-3 px-5 bg-[#FCFDFE] text-base text-body-color placeholder-[#ACB6BE] outline-none focus-visible:shadow-none focus:border-blue-700"
+      type="text"
+      [(ngModel)]="field.value.data"
+      [placeholder]="field.value.placeholder"
+    />
+  </div>
+</div>
+
+<div class="flex flex-col shadow-2xl border w-80 mt-12 pb-6">
+  <div class="bg-gradient-to-t to-blue-400 from-white h-36"></div>
+  <div class="flex flex-col items-center space-y-4">
+    <img
+      class="-mt-20 max-w-fit min-h-fit rounded-full border-4 border-white"
+      [src]="fields.image.data"
+      alt=""
+    />
+    <h1 class="text-xl">{{ fields.name.data }}</h1>
+    <h3 class="text-md text-gray-600">{{ fields.job.data }}</h3>
+    <h2 class="text-lg">" {{ fields.motto.data }} "</h2>
+  </div>
+</div>

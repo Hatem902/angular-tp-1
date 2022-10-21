@@ -1,11 +1,12 @@
-<div class="container ml-6 mt-4 space-y-2">
+<div class="flex flex-col space-y-2">
+  <h1 class="flex text-xl mb-2 justify-center">Color Picker</h1>
   <input
-    class="border"
+    class="border outline-none p-0.5 px-2"
     type="text"
     [(ngModel)]="color"
     placeholder="enter a color"
   />
-  <div class="max-w-sm h-8 border" [style.backgroundColor]="color"></div>
+  <div class="h-8 border" [style.backgroundColor]="color"></div>
   <button class="border bg-gray-300 hover:bg-white" (click)="colorReset()">
     Reset Color
   </button>
