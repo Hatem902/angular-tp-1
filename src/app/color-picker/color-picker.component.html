@@ -1,3 +1,12 @@
-<input type="text" [(ngModel)]="color" placeholder="enter a color" />
-<div class="max-w-sm h-8 border" [style.backgroundColor]="color"></div>
-<button class="mt-2 border-2" (click)="colorReset()">Reset Color</button>
+<div class="container ml-6 mt-4 space-y-2">
+  <input
+    class="border"
+    type="text"
+    [(ngModel)]="color"
+    placeholder="enter a color"
+  />
+  <div class="max-w-sm h-8 border" [style.backgroundColor]="color"></div>
+  <button class="border bg-gray-300 hover:bg-white" (click)="colorReset()">
+    Reset Color
+  </button>
+</div>
