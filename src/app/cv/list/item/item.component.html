@@ -1,0 +1,11 @@
+<div
+  class="flex p-2 justify-center items-center border-2 cursor-pointer"
+  (click)="setDetails(id)"
+>
+  <img
+    class="max-w-fit min-h-fit rounded-full border-4 border-white ml-4"
+    [src]="path"
+    alt=""
+  />
+  <h1>{{ name }}</h1>
+</div>

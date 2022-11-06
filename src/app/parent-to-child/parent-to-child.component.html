@@ -1,0 +1,11 @@
+<h1 class="flex text-xl mb-2 justify-center">Color from Parent to Child</h1>
+<div
+  class="flex w-60 h-16 justify-center items-center"
+  [style.backgroundColor]="bgColor"
+></div>
+<h1 class="flex text-xl my-2 justify-center mt-16">
+  color from Child to Parent
+</h1>
+
+<input type="text" placeholder="insert a color" #color />
+<button (click)="sendColor(color.value)">send Color to Parent</button>
